@@ -7,7 +7,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: {{ .wave | quote }}
 spec:
-  image: {{ .image }}:{{ .version }} 
+  image: {{ .image }} 
   imagePullPolicy: {{ .imagepullpolicy }}
   flinkVersion: "v1_18"
   flinkConfiguration:
@@ -67,8 +67,8 @@ spec:
       cpu: 0.5
   taskManager:
     resource:
-      memory: 1024m
-      cpu: 0.5
+      memory: 2048m
+      cpu: 1
   job:
     jarURI: local:///opt/flink/usrlib/sql-runner.jar
     args: [ {{ .sql_runner_args_values | quote }} ]

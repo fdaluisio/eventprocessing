@@ -1,5 +1,6 @@
 resourceNames:
   - name: table
+    wave: 2
     env: svil
     image: docker.io/fdaluisio/flinkjob:v1
     imagepullpolicy: ifNotPresent
