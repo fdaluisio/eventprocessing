@@ -21,7 +21,7 @@ CREATE TABLE KafkaTable (
   'properties.group.id' = 'testGroup',
   'scan.startup.mode' = 'earliest-offset',
   'format' = 'json',
-  'json.ignore-parse-errors' = 'true'
+  'json.ignore-parse-errors' = 'true',
   'properties.sasl.mechanism' = 'SCRAM-SHA-512',
   'properties.sasl.jaas.config' = 'org.apache.kafka.common.security.scram.ScramLoginModule required username="fd-kafkaUser" password="Wnb0mGgaGLkFIc49hvARCyyFRA0ojwNd";'
 );
