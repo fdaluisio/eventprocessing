@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: svil-fd
+  name: svil-fd-postgres
   namespace: openshift-gitops
 spec:
       project: default
@@ -12,7 +12,7 @@ spec:
         path: flink-instances/
         helm:
           valueFiles:
-            - values_01.yaml
+            - values_02.yaml
       destination:
         name: 'in-cluster'
         namespace: myproject

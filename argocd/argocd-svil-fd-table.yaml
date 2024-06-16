@@ -1,0 +1,19 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: svil-fd-table
+  namespace: openshift-gitops
+spec:
+      project: default
+      source:
+        repoURL: 'https://github.com/fdaluisio/eventprocessing.git'
+        revision: HEAD
+        path: flink-instances/
+        helm:
+          valueFiles:
+            - values_01.yaml
+      destination:
+        name: 'in-cluster'
+        namespace: myproject
+      syncPolicy: {}
