@@ -6,4 +6,4 @@ resourceNames:
     imagepullpolicy: ifNotPresent
     sql_runner_args_values: /opt/flink/usrlib/sql-scripts/table.sql
     storageclassname: crc-csi-hostpath-provisioner
-    storage: 100Mb
+    storage: 100M
