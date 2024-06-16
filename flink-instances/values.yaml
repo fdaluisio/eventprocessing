@@ -1,0 +1,8 @@
+resourceNames:
+  - name: table
+    env: svil
+    image: docker.io/fdaluisio/flinkjob:v1
+    imagepullpolicy: ifNotPresent
+    sql_runner_args_values: /opt/flink/usrlib/sql-scripts/table.sql
+    storageclassname: crc-csi-hostpath-provisioner
+    storage: 100Mb
