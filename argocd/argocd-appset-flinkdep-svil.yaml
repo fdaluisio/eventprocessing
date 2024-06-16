@@ -1,21 +1,10 @@
 
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
+kind: Application
 metadata:
   name: svil-fd
   namespace: openshift-gitops
 spec:
-  generators:
-  - list:
-      elements:
-        - valuesHelmFile: values_01.yaml
-          appName: fd-table
-        #- valuesHelmFile: values_02.yaml
-        #   appName: fd-postgres
-  template:
-    metadata: 
-      name: '{{appName}}'
-    spec:
       project: default
       source:
         repoURL: 'https://github.com/fdaluisio/eventprocessing.git'
@@ -23,7 +12,7 @@ spec:
         path: flink-instances/
         helm:
           valueFiles:
-            - '{{valuesHelmFile}}'
+            - values_01.yaml
       destination:
         name: 'in-cluster'
         namespace: myproject
