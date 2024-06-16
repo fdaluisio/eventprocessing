@@ -1,0 +1,9 @@
+resourceNames:
+  - name: print
+    wave: 3
+    env: svil
+    image: docker.io/fdaluisio/flinkjob:v1
+    imagepullpolicy: Always
+    sql_runner_args_values: /opt/flink/usrlib/sql-scripts/print.sql
+    storageclassname: crc-csi-hostpath-provisioner
+    storage: 100M
