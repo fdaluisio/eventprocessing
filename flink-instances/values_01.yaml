@@ -3,7 +3,7 @@ resourceNames:
     wave: 2
     env: svil
     image: docker.io/fdaluisio/flinkjob:v1
-    imagepullpolicy: ifNotPresent
+    imagepullpolicy: IfNotPresent
     sql_runner_args_values: /opt/flink/usrlib/sql-scripts/table.sql
     storageclassname: crc-csi-hostpath-provisioner
     storage: 100M
