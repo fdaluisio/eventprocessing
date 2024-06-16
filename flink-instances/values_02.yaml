@@ -1,5 +1,6 @@
 resourceNames:
   - name: postgres
+    wave: 3
     env: svil
     image: docker.io/fdaluisio/flinkjob:v1
     imagepullpolicy: Always
