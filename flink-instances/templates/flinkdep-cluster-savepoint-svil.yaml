@@ -30,6 +30,7 @@ spec:
     state.savepoints.dir: 'file:///opt/flink/volume/flink-sp'
     taskmanager.numberOfTaskSlots: '10'
     table.exec.source.idle-timeout: 30 s
+    security.ssl.enabled: 'false'  
     # security.ssl.enabled: 'true'  
     # security.ssl.truststore: /opt/flink/tls-cert/truststore.jks
     # security.ssl.truststore-password: <jks-password>
