@@ -7,3 +7,17 @@ resourceNames:
     sql_runner_args_values: /opt/flink/usrlib/sql-scripts/table.sql
     storageclassname: crc-csi-hostpath-provisioner
     storage: 100M
+    kafkaUser: pot-flink
+    cluster_ca_cert: prod-6-brokers-cluster-ca-cert
+    clients_ca_cert: prod-6-brokers-clients-ca-cert
+    needsStorage: false
+    storageclassname: crc-csi-hostpath-provisioner
+    storage: 1Gi
+    ibmlicense: EventAutomationProduction
+    namespace: event-automation
+    jobmanager:
+      memory: 1024m
+      cpu: 0.5
+    taskmanager:
+      memory: 2048m
+      cpu: 1
