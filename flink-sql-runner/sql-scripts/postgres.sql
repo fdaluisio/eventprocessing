@@ -76,7 +76,7 @@ u2vcQ3njLd1eZjz7UnjKdoM9VU3VxTzTxAJbNo1Kw3IQdieEY1jgB0h6r6p1Yjgc
 Y3CyECFlMiVFLqqY75R3e9N03RJYcZhn5OieQwwADviWj0bkSlMtcLMPRyPLl+Sr
 sfmSaehPDHi3PeOP9QpldREyGOFl8QFKVdrKAuGqprCHYpmpztN7229JHx8OqsUi
 GBVuIPa7IBHmCknpTdGkQhvzU9w2k52EWpSo+3tus6Wq
------END CERTIFICATE-----'
+-----END CERTIFICATE-----',
   'properties.security.protocol' = 'SASL_SSL',
   'properties.sasl.mechanism' = 'SCRAM-SHA-512',
   'properties.sasl.jaas.config' = 'org.apache.kafka.common.security.scram.ScramLoginModule required username="fd-kafkauser" password="Wnb0mGgaGLkFIc49hvARCyyFRA0ojwNd";'
