@@ -57,12 +57,12 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: {{ .cluster_ca_cert }}
-                  key: ca.crt
-            - name: CLIENTS_CA_CERT
+                  key: {{ .cluster_ca_cert_key }} 
+            - name: BROKERS_CERT
               valueFrom:
                 secretKeyRef:
-                  name: {{ .clients_ca_cert }}
-                  key: ca.crt
+                  name: {{ .brokers_cert }}
+                  key: {{ .brokers_cert_key }}
       volumes:
         - name: flink-logs
           emptyDir: {}

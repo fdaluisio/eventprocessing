@@ -9,7 +9,9 @@ resourceNames:
     storage: 100M
     kafkaUser: fd-kafkauser
     cluster_ca_cert: svil-es-kafka-cluster-ca-cert
-    clients_ca_cert: svil-es-kafka-clients-ca-cert
+    cluster_ca_cert_key: ca.crt
+    brokers_cert: svil-es-kafka-kafka-brokers
+    brokers_cert_key: svil-es-kafka-kafka-0.crt
     needsStorage: false
     storageclassname: crc-csi-hostpath-provisioner
     storage: 1Gi
