@@ -59,20 +59,22 @@ spec:
                 secretKeyRef:
                   name: {{ .kafkaUser }}
                   key: sasl.jaas.config
+            - name: CLUSTER_CA_CERT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .cluster_ca_cert }}
+                  key: ca.crt
+            - name: CLIENTS_CA_CERT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .clients_ca_cert }}
+                  key: ca.crt
       volumes:
         - name: flink-logs
           emptyDir: {}
         - name: flink-volume
           persistentVolumeClaim:
             claimName: flink-pvc-{{ .name }}
-        - name: cert-cluster-ca-cert
-          secret:
-            name: {{ .cluster_ca_cert }}
-            key: ca.crt
-#        - name: cert-clients-ca-cert
-#          secret:
-#            name: {{ .clients_ca_cert }}
-#            key: ca.crt
   jobManager:
     replicas: 1
     resource:
