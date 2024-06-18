@@ -45,12 +45,6 @@ spec:
               mountPath: /opt/flink/log
             - name: flink-volume
               mountPath: /opt/flink/volume
-            - name: cert-cluster-ca-cert
-              mountPath: /opt/flink/certs/
-              readOnly: true
-#            - name: cert-clients-ca-cert
-#              mountPath: /opt/flink/certs/
-#              readOnly: true
           env:
             - name: SQL_RUNNER_ARGS
               value: {{ .sql_runner_args_values | quote }}
