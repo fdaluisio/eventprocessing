@@ -45,6 +45,12 @@ spec:
               mountPath: /opt/flink/log
             - name: flink-volume
               mountPath: /opt/flink/volume
+            - name: cert-cluster-ca-cert
+              mountPath: /opt/flink/certs/
+              readOnly: true
+#            - name: cert-clients-ca-cert
+#              mountPath: /opt/flink/certs/
+#              readOnly: true
           env:
             - name: SQL_RUNNER_ARGS
               value: {{ .sql_runner_args_values | quote }}
@@ -59,6 +65,14 @@ spec:
         - name: flink-volume
           persistentVolumeClaim:
             claimName: flink-pvc-{{ .name }}
+        - name: cert-cluster-ca-cert
+          secret:
+            name: {{ .cluster_ca_cert }}
+            key: ca.crt
+#        - name: cert-clients-ca-cert
+#          secret:
+#            name: {{ .clients_ca_cert }}
+#            key: ca.crt
   jobManager:
     replicas: 1
     resource:
