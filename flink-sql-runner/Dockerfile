@@ -19,6 +19,5 @@
 FROM icr.io/cpopen/ibm-eventautomation-flink/ibm-eventautomation-flink@sha256:6293f90840e67bed7338ab0591512296cf41886708a29378c53ef1cc5b5426d4
 
 RUN mkdir /opt/flink/usrlib
-ADD lib/*.jar /opt/flink/lib/
 ADD flink-sql-runner/target/flink-sql-runner-example-*.jar /opt/flink/usrlib/sql-runner.jar
 ADD sql-scripts /opt/flink/usrlib/sql-scripts

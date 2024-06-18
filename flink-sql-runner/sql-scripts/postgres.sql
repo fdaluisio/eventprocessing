@@ -9,6 +9,7 @@ CREATE TABLE KafkaTable (
   'scan.startup.mode' = 'earliest-offset',
   'format' = 'json',
   'json.ignore-parse-errors' = 'true',
+  'properties.security.protocol' = 'SASL_PLAINTEXT',
   'properties.sasl.mechanism' = 'SCRAM-SHA-512',
   'properties.sasl.jaas.config' = 'org.apache.kafka.common.security.scram.ScramLoginModule required username="fd-kafkauser" password="Wnb0mGgaGLkFIc49hvARCyyFRA0ojwNd";'
 );
