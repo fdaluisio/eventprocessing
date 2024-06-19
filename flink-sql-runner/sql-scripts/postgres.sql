@@ -4,13 +4,11 @@ CREATE TABLE KafkaTable (
 ) WITH (
   'connector' = 'kafka',
   'topic' = 'orders',
-  'properties.bootstrap.servers' = 'svil-es-kafka-kafka-bootstrap.kafka.svc:9092',
+  'properties.bootstrap.servers' = 'svil-es-kafka-kafka-bootstrap.myproject.svc:9093',
   'properties.group.id' = 'ordersGroup',
   'scan.startup.mode' = 'earliest-offset',
   'format' = 'json',
   'json.ignore-parse-errors' = 'true',
-  'properties.security.protocol' = 'SASL_PLAINTEXT',
-  'properties.sasl.mechanism' = 'SCRAM-SHA-512',
   'properties.ssl.truststore.certificates' = '-----BEGIN CERTIFICATE-----
 MIIGWTCCBEGgAwIBAgIUG/AgLlgQRpMuvlHNhmnyEDPR1gIwDQYJKoZIhvcNAQEN
 BQAwLTETMBEGA1UECgwKaW8uc3RyaW16aTEWMBQGA1UEAwwNY2x1c3Rlci1jYSB2
