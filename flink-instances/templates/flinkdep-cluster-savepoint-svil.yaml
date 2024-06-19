@@ -30,7 +30,7 @@ spec:
     state.savepoints.dir: 'file:///opt/flink/volume/flink-sp'
     taskmanager.numberOfTaskSlots: '10'
     table.exec.source.idle-timeout: 30 s
-    security.ssl.enabled: 'false'  
+#    security.ssl.enabled: 'true'  
   serviceAccount: flink
   podTemplate:
     apiVersion: v1

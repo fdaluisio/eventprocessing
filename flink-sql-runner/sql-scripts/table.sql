@@ -17,7 +17,7 @@ CREATE TABLE KafkaTable (
 ) WITH (
   'connector' = 'kafka',
   'topic' = 'orders',
-  'properties.bootstrap.servers' = 'svil-es-kafka-kafka-bootstrap.kafka.svc:9092',
+  'properties.bootstrap.servers' = 'svil-es-kafka-kafka-external-bootstrap.myproject.svc:9094',
   'properties.group.id' = 'ordersGroup',
   'scan.startup.mode' = 'earliest-offset',
   'format' = 'json',
